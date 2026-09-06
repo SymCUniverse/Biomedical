@@ -1,0 +1,54 @@
+{
+  "schema": "gri-v2-p0-final-internal-summary-v1",
+  "date": "2026-09-06",
+  "status": "INTERNAL_P0_CLOSED",
+  "p3_v1_status": "NOT_EVALUABLE_CATEGORICAL_SELECTIVE_TEST",
+  "p3_v2_provenance": "post_D4_development_informed_pre_FINAL_freeze",
+  "final_result_zip_sha256": "b5e54917f0030ba6fc0841d79bcd38671922c0c0d37e620005d667f50c7e305f",
+  "final_holdout": {
+    "eligible_participants": 1686,
+    "composition_complete_participants": 1534,
+    "primary_evaluable_cancers": 18,
+    "excluded_primary_cancers": {"PAAD": 26}
+  },
+  "p1": {
+    "all_methylation_better_cancers": 17,
+    "non_tied_cancers": 18,
+    "exact_one_sided_sign_test_p": 0.000072479248046875,
+    "median_all_methylation_normalized_mse": 0.44402566207508987,
+    "median_all_methylation_r2": 0.5074384354448631,
+    "median_covariate_only_normalized_mse": 0.7017739627631043,
+    "median_covariate_only_r2": 0.18775030652476404,
+    "sole_loss": "PCPG"
+  },
+  "p3_v2": {
+    "selector": "GLOBAL_GEOMETRY_CONFIDENCE",
+    "selector_definition": "min(discovery RAW PRIMARY_PUBLICATION delta_CKA, discovery RAW MASKED_TECHNICAL delta_CKA)",
+    "spearman_rho_final_risk": -0.5603715170278638,
+    "one_sided_permutation_p": 0.00795,
+    "permutations": 99999,
+    "aurc": 0.4026622049191515,
+    "aurc_one_sided_permutation_p": 0.00526,
+    "d4_risk_vs_final_risk_rho": 0.7832817337461301,
+    "d4_risk_vs_final_risk_p": 0.00011,
+    "discovery_n_vs_final_risk_rho": 0.391124871001032,
+    "discovery_n_favorable_direction_p": 0.94619
+  },
+  "retention": {
+    "all_methylation_ridge": "RETAIN",
+    "continuous_global_geometry_confidence": "RETAIN_CANDIDATE_CONFIDENCE_LAYER",
+    "technical_mask": "RETAIN_ROBUSTNESS_TRACEABILITY",
+    "composition_attack": "RETAIN_ROBUSTNESS_INTERPRETATION",
+    "modal_within_layer": "RETAIN_DIAGNOSIS_TRACEABILITY",
+    "hallmark_label_null": "RETAIN_CLAIM_FIREWALL",
+    "categorical_accept_caution_refuse_predictive_selector": "DEMOTE_RETIRE_CURRENT_VERSION",
+    "hallmark_label_specific_semantic_sharing": "RETIRE_PROMOTED_CLAIM",
+    "regulatory_autonomy_scalar": "DROPPED",
+    "biological_chi": "NOT_ADMITTED"
+  },
+  "next": [
+    "execute frozen Stage C1 biological architecture case study unchanged",
+    "prepare external independent validation protocol for narrowed predictive/confidence architecture"
+  ],
+  "claim_ceiling": "internal TCGA cross-layer prediction and D4-informed pre-FINAL continuous risk ranking only; no external, clinical, causal, temporal, damping, EP, or biological-chi promotion"
+}
